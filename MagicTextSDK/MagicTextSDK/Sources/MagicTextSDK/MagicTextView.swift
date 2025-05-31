@@ -5,11 +5,9 @@
 //  Created by Aric on 5/31/25.
 //
 
-import Foundation
 import SwiftUI
 import WebKit
 
-/// A bare-bones SwiftUI view that wraps WKWebView and loads a single URL.
 public struct MagicTextView: UIViewRepresentable {
     public typealias UIViewType = WKWebView
 
@@ -28,17 +26,66 @@ public struct MagicTextView: UIViewRepresentable {
     }
 
     public func makeUIView(context: Context) -> WKWebView {
+        // Create a configuration with our userContentController
         let webConfig = WKWebViewConfiguration()
+        webConfig.userContentController = context.coordinator.userContentController
+
         let webView = WKWebView(frame: .zero, configuration: webConfig)
+
+        // Apply backgroundColor if provided:
+        if let bgColor = config.backgroundColor {
+            webView.backgroundColor = UIColor(bgColor)
+            webView.scrollView.backgroundColor = UIColor(bgColor)
+        }
+
         webView.navigationDelegate = context.coordinator
         return webView
     }
 
     public func updateUIView(_ webView: WKWebView, context: Context) {
-        // Only load once:
+        // Only run injection + load once:
         guard !context.coordinator.didLoadOnce else { return }
         context.coordinator.didLoadOnce = true
 
+        let userController = context.coordinator.userContentController
+
+        // 1) Inject custom CSS at document start
+        if let css = config.customCSS {
+            // Escape backslashes/newlines/quotes in CSS so it can live inside a JS string literal
+            let escapedCSS = css
+                .replacingOccurrences(of: "\\", with: "\\\\")
+                .replacingOccurrences(of: "\n", with: "\\n")
+                .replacingOccurrences(of: "\"", with: "\\\"")
+
+            let cssInjectionJS = """
+            var style = document.createElement('style');
+            style.innerText = \"\"\"
+            \(escapedCSS)
+            \"\"\";
+            document.head.appendChild(style);
+            """
+
+            let cssScript = WKUserScript(
+                source: cssInjectionJS,
+                injectionTime: .atDocumentStart,
+                forMainFrameOnly: true
+            )
+
+            userController.addUserScript(cssScript)
+        }
+
+        // 2) Inject custom JS at document end
+        if let js = config.customJS {
+            let jsScript = WKUserScript(
+                source: js,
+                injectionTime: .atDocumentEnd,
+                forMainFrameOnly: true
+            )
+
+            userController.addUserScript(jsScript)
+        }
+
+        // 3) Load the page
         let request = URLRequest(url: config.webURL)
         webView.load(request)
     }
@@ -48,7 +95,8 @@ public struct MagicTextView: UIViewRepresentable {
     }
 
     public class Coordinator: NSObject, WKNavigationDelegate {
-        private let parent: MagicTextView
+        let parent: MagicTextView
+        let userContentController = WKUserContentController()
         var didLoadOnce = false
 
         init(parent: MagicTextView) {

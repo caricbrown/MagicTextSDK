@@ -11,7 +11,10 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public struct MagicTextConfig {
   public let webURL: Foundation.URL
-  public init(webURL: Foundation.URL)
+  public let backgroundColor: SwiftUICore.Color?
+  public let customCSS: Swift.String?
+  public let customJS: Swift.String?
+  public init(webURL: Foundation.URL, backgroundColor: SwiftUICore.Color? = nil, customCSS: Swift.String? = nil, customJS: Swift.String? = nil)
 }
 @_Concurrency.MainActor @preconcurrency public struct MagicTextView : SwiftUI.UIViewRepresentable {
   public typealias UIViewType = WebKit.WKWebView

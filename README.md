@@ -173,7 +173,6 @@ To generate the `MagicTextSDK.xcframework` follow these steps:
    ```
 2. **Archive for Device** (arm64):
    ```bash
-   cd /path/to/MagicTextSDK
    xcodebuild archive      -scheme MagicTextSDK      -configuration Release      -destination "generic/platform=iOS"      -archivePath "./build/Device/MagicTextSDK.xcarchive"      SKIP_INSTALL=NO      BUILD_LIBRARY_FOR_DISTRIBUTION=YES
    ```
 3. **Archive for Simulator** (x86_64 + arm64):

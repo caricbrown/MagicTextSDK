@@ -72,9 +72,192 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "backgroundColor",
+            "printedName": "backgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Color?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Color",
+                    "printedName": "SwiftUI.Color",
+                    "usr": "s:7SwiftUI5ColorV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12MagicTextSDK0aB6ConfigV15backgroundColor7SwiftUI0F0VSgvp",
+            "mangledName": "$s12MagicTextSDK0aB6ConfigV15backgroundColor7SwiftUI0F0VSgvp",
+            "moduleName": "MagicTextSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SwiftUI.Color?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Color",
+                        "printedName": "SwiftUI.Color",
+                        "usr": "s:7SwiftUI5ColorV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12MagicTextSDK0aB6ConfigV15backgroundColor7SwiftUI0F0VSgvg",
+                "mangledName": "$s12MagicTextSDK0aB6ConfigV15backgroundColor7SwiftUI0F0VSgvg",
+                "moduleName": "MagicTextSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customCSS",
+            "printedName": "customCSS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12MagicTextSDK0aB6ConfigV9customCSSSSSgvp",
+            "mangledName": "$s12MagicTextSDK0aB6ConfigV9customCSSSSSgvp",
+            "moduleName": "MagicTextSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12MagicTextSDK0aB6ConfigV9customCSSSSSgvg",
+                "mangledName": "$s12MagicTextSDK0aB6ConfigV9customCSSSSSgvg",
+                "moduleName": "MagicTextSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customJS",
+            "printedName": "customJS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12MagicTextSDK0aB6ConfigV8customJSSSSgvp",
+            "mangledName": "$s12MagicTextSDK0aB6ConfigV8customJSSSSgvp",
+            "moduleName": "MagicTextSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12MagicTextSDK0aB6ConfigV8customJSSSSgvg",
+                "mangledName": "$s12MagicTextSDK0aB6ConfigV8customJSSSSgvg",
+                "moduleName": "MagicTextSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(webURL:)",
+            "printedName": "init(webURL:backgroundColor:customCSS:customJS:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -87,11 +270,56 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Color?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Color",
+                    "printedName": "SwiftUI.Color",
+                    "usr": "s:7SwiftUI5ColorV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12MagicTextSDK0aB6ConfigV6webURLAC10Foundation0F0V_tcfc",
-            "mangledName": "$s12MagicTextSDK0aB6ConfigV6webURLAC10Foundation0F0V_tcfc",
+            "usr": "s:12MagicTextSDK0aB6ConfigV6webURL15backgroundColor9customCSS0I2JSAC10Foundation0F0V_7SwiftUI0H0VSgSSSgAOtcfc",
+            "mangledName": "$s12MagicTextSDK0aB6ConfigV6webURL15backgroundColor9customCSS0I2JSAC10Foundation0F0V_7SwiftUI0H0VSgSSSgAOtcfc",
             "moduleName": "MagicTextSDK",
             "declAttributes": [
               "AccessControl"
@@ -104,8 +332,7 @@
         "mangledName": "$s12MagicTextSDK0aB6ConfigV",
         "moduleName": "MagicTextSDK",
         "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -126,20 +353,13 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "MagicTextSDK",
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "MagicTextSDK"
       },
       {
         "kind": "Import",
@@ -904,8 +1124,7 @@
         "declAttributes": [
           "Preconcurrency",
           "Custom",
-          "AccessControl",
-          "RawDocComment"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -995,7 +1214,7 @@
     {
       "filePath": "\/Users\/aric\/Documents\/GitHub\/MagicTextSDK-Minimal\/MagicTextSDK\/MagicTextSDK\/Sources\/MagicTextSDK\/MagicTextView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1446,
+      "offset": 3115,
       "length": 5,
       "value": "false"
     }

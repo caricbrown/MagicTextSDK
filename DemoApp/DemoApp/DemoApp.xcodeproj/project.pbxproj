@@ -43,7 +43,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		0350563A2DEBB05200123549 /* Exceptions for "DemoApp" folder in "Embed Frameworks" phase from "DemoApp" target */ = {
+		0336676B2DEBBDA80084F4EC /* Exceptions for "DemoApp" folder in "Embed Frameworks" phase from "DemoApp" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
 				MagicTextSDK.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
@@ -59,7 +59,7 @@
 		0358ACB42DEB918C00CA68B1 /* DemoApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0350563A2DEBB05200123549 /* Exceptions for "DemoApp" folder in "Embed Frameworks" phase from "DemoApp" target */,
+				0336676B2DEBBDA80084F4EC /* Exceptions for "DemoApp" folder in "Embed Frameworks" phase from "DemoApp" target */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
