@@ -42,9 +42,25 @@
 		0358ACCD2DEB918D00CA68B1 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		0350563A2DEBB05200123549 /* Exceptions for "DemoApp" folder in "Embed Frameworks" phase from "DemoApp" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				MagicTextSDK.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 0350559D2DEBA11B00123549 /* Embed Frameworks */;
+			membershipExceptions = (
+				MagicTextSDK.xcframework,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0358ACB42DEB918C00CA68B1 /* DemoApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0350563A2DEBB05200123549 /* Exceptions for "DemoApp" folder in "Embed Frameworks" phase from "DemoApp" target */,
+			);
 			path = DemoApp;
 			sourceTree = "<group>";
 		};
