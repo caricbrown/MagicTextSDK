@@ -1,0 +1,6 @@
+framework module MagicTextSDK {
+  umbrella header "MagicTextSDK.h"
+  export *
+
+  module * { export * }
+}

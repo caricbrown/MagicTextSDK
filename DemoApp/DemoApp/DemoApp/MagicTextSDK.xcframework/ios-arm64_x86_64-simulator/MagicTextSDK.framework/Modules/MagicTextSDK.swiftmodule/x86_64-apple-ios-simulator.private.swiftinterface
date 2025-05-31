@@ -1,0 +1,33 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios16.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name MagicTextSDK
+import Foundation
+@_exported import MagicTextSDK
+import Swift
+import SwiftUI
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct MagicTextConfig {
+  public let webURL: Foundation.URL
+  public init(webURL: Foundation.URL)
+}
+@_Concurrency.MainActor @preconcurrency public struct MagicTextView : SwiftUI.UIViewRepresentable {
+  public typealias UIViewType = WebKit.WKWebView
+  @_Concurrency.MainActor @preconcurrency public var onLoad: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var onError: ((any Swift.Error) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public init(config: MagicTextSDK.MagicTextConfig, onLoad: (() -> Swift.Void)? = nil, onError: ((any Swift.Error) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func makeUIView(context: MagicTextSDK.MagicTextView.Context) -> WebKit.WKWebView
+  @_Concurrency.MainActor @preconcurrency public func updateUIView(_ webView: WebKit.WKWebView, context: MagicTextSDK.MagicTextView.Context)
+  @_Concurrency.MainActor @preconcurrency public func makeCoordinator() -> MagicTextSDK.MagicTextView.Coordinator
+  @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Coordinator : ObjectiveC.NSObject, WebKit.WKNavigationDelegate {
+    @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+    @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+    @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+    @objc deinit
+  }
+  public typealias Body = Swift.Never
+}
+extension MagicTextSDK.MagicTextView : Swift.Sendable {}
+extension MagicTextSDK.MagicTextView.Coordinator : Swift.Sendable {}
