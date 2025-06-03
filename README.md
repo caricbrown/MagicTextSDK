@@ -1,6 +1,6 @@
-# MagicTextSDK (Minimal)
+# MagicTextSDK
 
-A bare-bones iOS 16+ SDK that wraps a `WKWebView` inside a SwiftUI view. It exposes only two public types—`MagicTextConfig` and `MagicTextView`—and two callbacks (`onLoad` and `onError`).
+A bare-bones iOS 16+ SDK that wraps a `WKWebView` inside a SwiftUI view. It exposes two public types—`MagicTextConfig` and `MagicTextView`—and two callbacks (`onLoad` and `onError`).
 
 ---
 
