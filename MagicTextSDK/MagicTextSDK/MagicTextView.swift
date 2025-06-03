@@ -26,37 +26,40 @@ public struct MagicTextView: UIViewRepresentable {
     }
 
     public func makeUIView(context: Context) -> WKWebView {
-        // Create a configuration with our userContentController
+        // 1) Create configuration and assign the coordinator’s userContentController
         let webConfig = WKWebViewConfiguration()
         webConfig.userContentController = context.coordinator.userContentController
 
+        // 2) Instantiate WKWebView with that configuration
         let webView = WKWebView(frame: .zero, configuration: webConfig)
 
-        // Apply backgroundColor if provided:
+        // 3) Apply backgroundColor if provided
         if let bgColor = config.backgroundColor {
             webView.backgroundColor = UIColor(bgColor)
-            webView.scrollView.backgroundColor = UIColor(bgColor)
+            webView.scrollView.backgroundColor = webView.backgroundColor
         }
 
+        // 4) Set navigationDelegate to receive callbacks
         webView.navigationDelegate = context.coordinator
         return webView
     }
 
     public func updateUIView(_ webView: WKWebView, context: Context) {
-        // Only run injection + load once:
+        // Ensure we only inject once
         guard !context.coordinator.didLoadOnce else { return }
         context.coordinator.didLoadOnce = true
 
         let userController = context.coordinator.userContentController
 
-        // 1) Inject custom CSS at document start
+        // 1) Inject custom CSS at document start, if provided
         if let css = config.customCSS {
-            // Escape backslashes/newlines/quotes in CSS so it can live inside a JS string literal
+            // Escape backslashes, newlines, and quotes so the CSS can be embedded in JS
             let escapedCSS = css
                 .replacingOccurrences(of: "\\", with: "\\\\")
                 .replacingOccurrences(of: "\n", with: "\\n")
                 .replacingOccurrences(of: "\"", with: "\\\"")
 
+            // Build a JS snippet that creates a <style> tag containing the CSS
             let cssInjectionJS = """
             var style = document.createElement('style');
             style.innerText = \"\"\"
@@ -70,22 +73,20 @@ public struct MagicTextView: UIViewRepresentable {
                 injectionTime: .atDocumentStart,
                 forMainFrameOnly: true
             )
-
             userController.addUserScript(cssScript)
         }
 
-        // 2) Inject custom JS at document end
+        // 2) Inject custom JS at document end, if provided
         if let js = config.customJS {
             let jsScript = WKUserScript(
                 source: js,
                 injectionTime: .atDocumentEnd,
                 forMainFrameOnly: true
             )
-
             userController.addUserScript(jsScript)
         }
 
-        // 3) Load the page
+        // 3) Finally, load the web URL
         let request = URLRequest(url: config.webURL)
         webView.load(request)
     }

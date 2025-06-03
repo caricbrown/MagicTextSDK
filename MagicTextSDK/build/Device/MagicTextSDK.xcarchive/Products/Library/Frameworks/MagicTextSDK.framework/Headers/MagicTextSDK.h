@@ -2,7 +2,7 @@
 //  MagicTextSDK.h
 //  MagicTextSDK
 //
-//  Created by Aric on 5/31/25.
+//  Created by Aric on 6/2/25.
 //
 
 #import <Foundation/Foundation.h>

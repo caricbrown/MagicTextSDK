@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MagicTextSDK.h</key>
 		<data>
-		UMrrnElgZC5dqufroYGY8EjJ4TQ=
+		jCGsyQaFlXMAnim4g4v09HZUDnM=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/MagicTextSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		GRBhGfYf8wtfEqlv6UldM+qMMi8=
+		exG5ViS5Uq9oR/wn7bRASgOmJW4=
 		</data>
 		<key>Modules/MagicTextSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/MagicTextSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		QlH5IXFRY7EZqXZXdevR3bVrBtw=
+		tOgrEfNv6+fj1O+U8qaI4qBZYdA=
 		</data>
 		<key>Modules/MagicTextSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -43,14 +43,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ONMnwoqoSroqkp+kjDyJGLmHKsZI8VA+PRqlNXV+ekM=
+			Zsa/ltaHJhbdLOvl5p/12j0XRajjh1/14O6JHlPMnk0=
 			</data>
 		</dict>
 		<key>Modules/MagicTextSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n6cnCkAMPjIfrC6aHUlRX+q10Dcqv3bYdoBjivd3JDM=
+			Gxc4ppL6kaXhslbRTtW6h2pbkIdA9mVl4PxhtY5EEiI=
 			</data>
 		</dict>
 		<key>Modules/MagicTextSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -64,7 +64,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WeERkvy9BlqvxqtV/d78IyISH/dtP4ZCE5004E5Cr3o=
+			itpGab0ZYeNNLXjWVX7KxhmYndcMi22FNV9V0fsO6gY=
 			</data>
 		</dict>
 		<key>Modules/MagicTextSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>

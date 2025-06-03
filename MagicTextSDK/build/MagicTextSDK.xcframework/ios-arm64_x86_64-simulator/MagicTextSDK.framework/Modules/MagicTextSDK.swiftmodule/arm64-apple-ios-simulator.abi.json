@@ -44,8 +44,7 @@
             "moduleName": "MagicTextSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -97,8 +96,7 @@
             "moduleName": "MagicTextSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -158,8 +156,7 @@
             "moduleName": "MagicTextSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -219,8 +216,7 @@
             "moduleName": "MagicTextSDK",
             "declAttributes": [
               "HasStorage",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -332,7 +328,8 @@
         "mangledName": "$s12MagicTextSDK0aB6ConfigV",
         "moduleName": "MagicTextSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "conformances": [
           {
@@ -1212,9 +1209,9 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/aric\/Documents\/GitHub\/MagicTextSDK-Minimal\/MagicTextSDK\/MagicTextSDK\/Sources\/MagicTextSDK\/MagicTextView.swift",
+      "filePath": "\/Users\/aric\/Documents\/GitHub\/MagicTextSDK-Minimal\/MagicTextSDK\/MagicTextSDK\/MagicTextView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3115,
+      "offset": 3366,
       "length": 5,
       "value": "false"
     }
